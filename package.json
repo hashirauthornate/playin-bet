@@ -9,9 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/styled-components": "^5.1.26",
+    "add": "^2.0.6",
+    "bootstrap": "^5.2.2",
     "next": "13.0.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-bootstrap": "^2.5.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.6.0",
+    "styled-components": "^5.3.6",
+    "yarn": "^1.22.19"
   },
   "devDependencies": {
     "@types/node": "18.11.8",
