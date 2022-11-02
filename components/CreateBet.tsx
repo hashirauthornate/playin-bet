@@ -27,10 +27,14 @@ type Props = {
 
 const CreateBet = ({ title, setPage, page, children }: Props) => {
   return (
-    <BetWrapper onClick={() => setPage(page + 1)}>
-      <div>{title}</div>
-      <div>{children}</div>
-    </BetWrapper>
+    <>
+      {page && (
+        <BetWrapper onClick={() => setPage(page + 1)}>
+          <div>{title}</div>
+          <div>{children}</div>
+        </BetWrapper>
+      )}
+    </>
   );
 };
 

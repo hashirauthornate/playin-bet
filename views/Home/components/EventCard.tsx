@@ -76,7 +76,7 @@ const Policy = styled.div`
   color: ${(props) => props.theme.colors.green};
   font-size: 20px;
   text-align: center;
-  padding:20px 0 ;
+  padding: 20px 0;
 `;
 const TitleWrapper = styled.div`
   padding: 25px;
