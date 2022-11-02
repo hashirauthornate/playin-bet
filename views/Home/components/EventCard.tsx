@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React, { useState } from "react";
-import { Row, Stack } from "react-bootstrap";
+import { ProgressBar, Row, Stack } from "react-bootstrap";
 import Col from "react-bootstrap/Col";
 import styled from "styled-components";
 import Comment from "../../../components/Comment";
@@ -187,6 +187,11 @@ type Props = {
 };
 
 const EventCard = ({ setPage, page }: Props) => {
+  const [now, setNow] = useState(0);
+  const multiCall = () => {
+    setPage(page + 1);
+    setNow(now + 1);
+  };
   return (
     <CardWrapper>
       {page > 1 ? (
@@ -204,6 +209,7 @@ const EventCard = ({ setPage, page }: Props) => {
               <Title>Pick the Player/Team</Title>
             </Stack>
           </Navbar>
+
           <hr />
         </>
       ) : (
