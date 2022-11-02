@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { FaPlus } from "react-icons/fa";
-const BetWrapper = styled.div`
+const BetWrapper: any = styled.div`
   background-color: ${(props) => props.theme.colors.foreground};
   border-radius: 20px;
   width: 370px;
@@ -28,8 +28,13 @@ type Props = {
 const CreateBet = ({ title, setPage, page, children }: Props) => {
   return (
     <>
-      {page && (
+      {page != undefined && page > 0 ? (
         <BetWrapper onClick={() => setPage(page + 1)}>
+          <div>{title}</div>
+          <div>{children}</div>
+        </BetWrapper>
+      ) : (
+        <BetWrapper>
           <div>{title}</div>
           <div>{children}</div>
         </BetWrapper>

@@ -18,7 +18,7 @@ import frame from "../../../public/frame.png";
 const CardWrapper = styled.div`
   background-color: rgba(38, 38, 38, 0.7);
   width: 870px;
-  height: 100%;
+ 
   & > hr {
     border: 2px solid grey;
     opacity: 0.2;
