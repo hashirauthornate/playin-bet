@@ -2,8 +2,8 @@ import Image from "next/image";
 import React from "react";
 import styled from "styled-components";
 import logo from "../public/logo.png";
-import ethereumIcon from "../public/ethereumicon.png";
-import playinicon from "../public/playinicon.png";
+import ethereumIcon from "../public/ethereumIcon.png";
+import playinicon from "../public/playinIcon.png";
 import avatar from "../public/avatar.png";
 const NavbarWrapper = styled.div`
   padding: 55px 35px;
