@@ -106,18 +106,23 @@ const PercentageWrapper = styled.div`
   margin: 20px 0;
 `;
 const Container = styled.div`
-  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  justify-content: space-between;
 `;
 const SliderWrapper = styled.div`
-  padding: 20px 0px;
+  padding: 25px 0px;
 `;
 const Slider = styled.input`
   -webkit-appearance: none;
   -moz-appearance: none;
-  width: 105%;
+  width: 325px;
   height: 8px;
   display: block;
   background-color: #262626;
+  border-radius: 20px;
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
     background: #262626;
@@ -155,7 +160,7 @@ const SubmitBetButton = styled.div`
   justify-content: center;
   align-items: center;
   padding: 5px 20px;
-  font-weight: 500;
+  font-weight: 700;
   cursor: pointer;
   color: black;
   margin: 30px 0;

@@ -18,7 +18,7 @@ import frame from "../../../public/frame.png";
 const CardWrapper = styled.div`
   background-color: rgba(38, 38, 38, 0.7);
   width: 870px;
- 
+
   & > hr {
     border: 2px solid grey;
     opacity: 0.2;
@@ -184,7 +184,24 @@ type Props = {
 const EventCard = ({ setPage, page }: Props) => {
   return (
     <CardWrapper>
-      {page === 1 ? (
+      {page > 1 ? (
+        <>
+          <Navbar>
+            <Stack direction="horizontal" gap={3}>
+              <Dot
+                size="40px"
+                onClick={() => {
+                  setPage(page - 1);
+                }}
+              >
+                <RiArrowLeftSLine color="white" size={35} />
+              </Dot>
+              <Title>Pick the Player/Team</Title>
+            </Stack>
+          </Navbar>
+          <hr />
+        </>
+      ) : (
         <>
           <Navbar>
             <Title>EVENTS</Title>
@@ -195,6 +212,10 @@ const EventCard = ({ setPage, page }: Props) => {
             </NavlinkWrapper>
           </Navbar>
           <hr />
+        </>
+      )}
+      {page === 1 ? (
+        <>
           <FlexWrapper>
             <CreateBet title="Bet type: Game winner">
               <IoIosArrowDown color="cef458" size={20} />
@@ -246,15 +267,6 @@ const EventCard = ({ setPage, page }: Props) => {
         </>
       ) : page == 2 ? (
         <>
-          <Navbar>
-            <Stack direction="horizontal" gap={3}>
-              <Dot size="40px">
-                <RiArrowLeftSLine color="white" size={35} />
-              </Dot>
-              <Title>Pick the Player/Team</Title>
-            </Stack>
-          </Navbar>
-          <hr />
           <Container>
             <FlexWrapper>
               <CreateBet title="Search Matchups">
@@ -347,15 +359,6 @@ const EventCard = ({ setPage, page }: Props) => {
         </>
       ) : page == 3 ? (
         <>
-          <Navbar>
-            <Stack direction="horizontal" gap={3}>
-              <Dot size="40px">
-                <RiArrowLeftSLine color="white" size={35} />
-              </Dot>
-              <Title>Pick the Player/Team</Title>
-            </Stack>
-          </Navbar>
-          <hr />
           <Container>
             <FlexWrapper>
               <CreateBet title="Search Matchups">
@@ -425,15 +428,6 @@ const EventCard = ({ setPage, page }: Props) => {
         </>
       ) : page == 4 ? (
         <>
-          <Navbar>
-            <Stack direction="horizontal" gap={3}>
-              <Dot size="40px">
-                <RiArrowLeftSLine color="white" size={35} />
-              </Dot>
-              <Title>Pick the Player/Team</Title>
-            </Stack>
-          </Navbar>
-          <hr />
           <Row>
             <Col>
               <NumberWrapper>0</NumberWrapper>
@@ -512,14 +506,6 @@ const EventCard = ({ setPage, page }: Props) => {
         </>
       ) : page === 5 ? (
         <>
-          <Navbar>
-            <Stack direction="horizontal" gap={3}>
-              <Dot size="40px">
-                <RiArrowLeftSLine color="white" size={35} />
-              </Dot>
-              <Title>Pick the Player/Team</Title>
-            </Stack>
-          </Navbar>
           <Container>
             <Image src={line} alt="line" />
             <br />
@@ -571,15 +557,6 @@ const EventCard = ({ setPage, page }: Props) => {
         </>
       ) : (
         <>
-          <Navbar>
-            <Stack direction="horizontal" gap={3}>
-              <Dot size="40px">
-                <RiArrowLeftSLine color="white" size={35} />
-              </Dot>
-              <Title>Pick the Player/Team</Title>
-            </Stack>
-          </Navbar>
-          <hr />
           <Container>
             <CenterTitle>Your bet is set</CenterTitle>
             <Center>
