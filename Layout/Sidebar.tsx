@@ -5,14 +5,15 @@ const SidbarWrapper = styled.div`
   flex-direction: column;
   padding: 35px;
   height: 100vh;
+  width: 15%;
 `;
 const NavLink = styled.div`
-  font-size: 25px;
+  font-size: 30px;
   font-weight: 700;
   color: ${(props) => props.theme.colors.fade};
   text-transform: uppercase;
   cursor: pointer;
-  margin: 20px 0;
+  margin: 15px 0;
   &:hover {
     color: ${(props) => props.theme.colors.green};
   }

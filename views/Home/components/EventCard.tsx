@@ -15,6 +15,7 @@ import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
 import Btn from "../../../components/Btn";
 import line from "../../../public/line.png";
 import frame from "../../../public/frame.png";
+
 const CardWrapper = styled.div`
   background-color: rgba(38, 38, 38, 0.7);
   width: 870px;
@@ -38,6 +39,7 @@ const Container = styled.div`
 const Flex = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
 `;
 const Title = styled.div`
   font-size: 25px;
@@ -127,14 +129,17 @@ const Dot = styled.div`
   }
 `;
 const NumberWrapper = styled.div`
-  height: 40px;
-  width: 60px;
+  height: 60px;
+  width: 80px;
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  font-size: 30px;
+  font-weight: 800;
+  text-align: center;
   color: white;
   margin: 10px;
   &:hover {
@@ -242,7 +247,7 @@ const EventCard = ({ setPage, page }: Props) => {
               </IconWrapper>
               <Btn title="Join Room" />
             </IconButtonWrapper>
-            <hr />
+            <Image src={line} alt="line" />
           </TitleWrapper>
           <Column>
             <Image src={match2} alt="banner" width={790} />
@@ -262,7 +267,7 @@ const EventCard = ({ setPage, page }: Props) => {
               </IconWrapper>
               <Btn title="Join Room" />
             </IconButtonWrapper>
-            <hr />
+            <Image src={line} alt="line" />
           </TitleWrapper>
         </>
       ) : page == 2 ? (
@@ -442,16 +447,20 @@ const EventCard = ({ setPage, page }: Props) => {
               <NumberWrapper>3</NumberWrapper>
             </Col>
             <Col>
+              <NumberWrapper>4</NumberWrapper>
+            </Col>
+            <Col>
               <NumberWrapper>5+</NumberWrapper>
             </Col>
           </Row>
+
           <Container>
             <Image src={line} alt="line" />
             <br />
             <br />
             <Stack gap={5}>
               <Flex>
-                <Name>MINNESOTA WILD</Name>
+                <Name>4 PENALTY MINUTES</Name>
                 <Dot size="60px">
                   <RiArrowRightSLine
                     color="#CEF458"
@@ -460,8 +469,9 @@ const EventCard = ({ setPage, page }: Props) => {
                   />
                 </Dot>
               </Flex>
+              <Image src={line} alt="line" />
               <Flex>
-                <Name>MONTREAL CANADIENS</Name>
+                <Name>2 SHOTS TAKEN</Name>
                 <Dot size="60px">
                   <RiArrowRightSLine
                     color="#CEF458"
@@ -470,8 +480,9 @@ const EventCard = ({ setPage, page }: Props) => {
                   />
                 </Dot>
               </Flex>
+              <Image src={line} alt="line" />
               <Flex>
-                <Name>KIRBY DACH</Name>
+                <Name>1 GOAL SCORED</Name>
                 <Dot size="60px">
                   <RiArrowRightSLine
                     color="#CEF458"
@@ -480,8 +491,9 @@ const EventCard = ({ setPage, page }: Props) => {
                   />
                 </Dot>
               </Flex>
+              <Image src={line} alt="line" />
               <Flex>
-                <Name>JAKE ALLEN</Name>
+                <Name>1 ASSIST</Name>
                 <Dot size="60px">
                   <RiArrowRightSLine
                     color="#CEF458"
@@ -490,18 +502,8 @@ const EventCard = ({ setPage, page }: Props) => {
                   />
                 </Dot>
               </Flex>
-              <Flex>
-                <Name>BRENDAN GALLAGHER</Name>
-                <Dot size="60px">
-                  <RiArrowRightSLine
-                    color="#CEF458"
-                    size={45}
-                    onClick={() => setPage(page + 1)}
-                  />
-                </Dot>
-              </Flex>
+              <Image src={line} alt="line" />
             </Stack>
-            <Image src={line} alt="line" />
           </Container>
         </>
       ) : page === 5 ? (
@@ -560,7 +562,7 @@ const EventCard = ({ setPage, page }: Props) => {
           <Container>
             <CenterTitle>Your bet is set</CenterTitle>
             <Center>
-              <Image src={frame} alt="square" />s
+              <Image src={frame} alt="square" />
             </Center>
             <CenterTitle>
               Add your wager and sumbit your bet for

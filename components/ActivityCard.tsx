@@ -34,7 +34,7 @@ const SubTitle = styled.div`
 `;
 const UserSection = styled.div`
   padding-top: 10px;
-  margin-bottom: 50px;
+  
   padding: 25px;
 `;
 const IconsWrapper = styled.div`
@@ -49,22 +49,21 @@ const StatsWrapper = styled.div`
 const TextWrapper = styled.div`
   display: flex;
   align-items: baseline;
-  padding-top: 10px;
+  justify-content: space-between;
+  padding: 10px 0;
 `;
 const Text = styled("div")<{ italic?: boolean; green?: boolean }>`
   color: ${(props) =>
     props.green ? props.theme.colors.green : props.theme.colors.fade};
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 800;
   font-style: ${(props) => (props.italic ? "italic" : "normal")};
-  padding: 10px 25px;
 `;
 
 const Mention = styled.div`
   color: white;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 800;
-  margin-right: 20px;
 `;
 const WaggerButton = styled("div")<{ left?: boolean; right?: boolean }>`
   background-color: ${(props) => props.theme.colors.foreground};
@@ -99,7 +98,7 @@ const PercentageWrapper = styled.div`
   padding: 5px 20px;
   font-weight: 800;
   cursor: pointer;
-  color: ${(props) => props.theme.colors.fade};
+  color: ${(props) => props.theme.colors.fade}; 
   &:hover {
     border: 1px solid #cef458;
   }
