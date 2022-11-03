@@ -9,7 +9,7 @@ import { Row, Stack, Col, Form } from "react-bootstrap";
 
 const CardWrapper = styled.div`
   background-color: rgba(38, 38, 38, 0.7);
-  width: 350px;
+  width: 330px;
   & > hr {
     border: 2px solid grey;
     opacity: 0.2;

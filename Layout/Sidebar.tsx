@@ -5,7 +5,6 @@ const SidbarWrapper = styled.div`
   flex-direction: column;
   padding: 35px;
   height: 100vh;
-  width: 15%;
 `;
 const NavLink = styled.div`
   font-size: 30px;

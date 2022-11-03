@@ -1,4 +1,5 @@
 import React from "react";
+import { Col, Row } from "react-bootstrap";
 import styled from "styled-components";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
@@ -17,11 +18,15 @@ type Props = {
 const Layout = ({ children }: Props) => {
   return (
     <LayoutWrapper>
-      <Navbar />
-      <Flex>
-        <Sidebar />
-        {children}
-      </Flex>
+      <Row>
+        <Navbar />
+      </Row>
+      <Row>
+        <Col lg={2}>
+          <Sidebar />
+        </Col>
+        <Col>{children}</Col>
+      </Row>
     </LayoutWrapper>
   );
 };

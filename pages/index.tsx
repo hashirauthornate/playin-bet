@@ -6,9 +6,7 @@ import EventCard from "../views/Home/components/EventCard";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import { useState } from "react";
-const PageWrapper = styled.div`
-  padding: 25px;
-`;
+const PageWrapper = styled.div``;
 export default function Home() {
   const [page, setpage] = useState(1);
   return (
@@ -20,7 +18,7 @@ export default function Home() {
       </Head>
       <PageWrapper>
         <Row>
-          <Col lg={9}>
+          <Col lg={8}>
             <EventCard setPage={setpage} page={page} />
           </Col>
           <Col lg={1}>
